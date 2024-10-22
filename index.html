@@ -4,28 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assortment of tasty burger buttons for every taste">
+    <meta name="keywords" content="burger-button, interactive-button, header-menu, menu-button">
+    <meta name="author" content="Stepan Dordiai">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <title>Tasty Burger</title>
 </head>
 
 <body>
     <div class="warning">
-        <h5>Hi! If you like my tasty burgers and would like to use them, please leave a star on github or buy me a
+        <h5 class="warning-title">Hi! If you like my tasty burgers and would like to use them, please leave a star on
+            github or buy me a
             coffee, it would be really nice!</h5>
-        <button onclick="access()">Yes, I agree!</button>
-        <button>No, thank you</button>
+        <div class="warning__btn-container">
+            <button class="access-btn" onclick="access()">Yes, I agree</button>
+            <button class="deny-btn" onclick="deny()">No, thank you</button>
+        </div>
     </div>
     <header class="header">
         <div class="header__left-section">
-            <div onclick="toggleLogoBurger()" class="logo-burger">
+            <div class="logo-burger">
                 <span class="logo-burger__center"></span>
             </div>
             <h1 class="logo-title">Tasty Burger</h1>
         </div>
-
-        <a href="" target="_blank"><img class="header__github-img" src="./img/github-logo.png" alt=""></a>
+        <a class="header__github-link" href="https://github.com/heeeyooo/tasty-burger" target="_blank"><img
+                class="header__github-img" src="./img/github-logo.png" alt="">Star 0</a>
     </header>
     <div class="grid-container">
+        <!--  -->
         <div class="burger-container one"></div>
         <div class="burger-container two"></div>
         <div class="burger-container three"></div>
@@ -34,59 +43,46 @@
         <div class="burger-container six"></div>
         <div class="burger-container seven"></div>
         <div class="burger-container eight"></div>
+        <!--  -->
         <div class="burger-container">
             <button class="burger-container__copy copy-burger-one">Copy</button>
-            <div onclick="toggleFirst()" class="first"></div>
+            <div onclick="toggleBurgerOne()" class="burger-one"></div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-one">Copy</button>
-
-            <div onclick="toggleSecond()" class="second"></div>
+            <button class="burger-container__copy copy-burger-two">Copy</button>
+            <div onclick="toggleBurgerTwo()" class="burger-two"></div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-one">Copy</button>
-
-            <div onclick="toggleThird()" class="third">
-                <span class="center"></span>
+            <button class="burger-container__copy copy-burger-three">Copy</button>
+            <div onclick="toggleBurgerThree()" class="burger-three">
+                <span class="burger-three__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-one">Copy</button>
-
-            <div onclick="toggleFourth()" class="fourth">
-                <span class="fourth__center"></span>
+            <button class="burger-container__copy copy-burger-four">Copy</button>
+            <div onclick="toggleBurgerFour()" class="burger-four">
+                <span class="burger-four__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-one">Copy</button>
-
+            <button class="burger-container__copy copy-burger-five">Copy</button>
             <div class="burger-five">
                 <span class="burger-five__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-one">Copy</button>
-
+            <button class="burger-container__copy copy-burger-six">Copy</button>
             <div class="burger-six">
                 <span class="burger-six__center-line"></span>
             </div>
         </div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
-        <div class="burger-container"></div>
+        <div class="burger-container">
+            <button class="burger-container__copy copy-burger-seven">Copy</button>
+            <div onclick="toggleBurgerSeven()" class="burger-seven">
+                <span class="burger-seven__center-line1"></span>
+                <span class="burger-seven__center-line2"></span>
+            </div>
+        </div>
         <div class="burger-container"></div>
         <div class="burger-container"></div>
         <div class="burger-container"></div>
@@ -102,9 +98,14 @@
         <div class="burger-container"></div>
     </div>
     <footer class="footer">
-        <p>Created by <a href="https://stepandordiai.netlify.app/" target="_blank">Stepan Dordiai</a></p>
-        <p>Buy me a coffee</p>
+        <p class="creator">Created by <a href="https://stepandordiai.netlify.app/" target="_blank">Stepan Dordiai</a>
+        </p>
+        <button class="coffee">Buy me a coffee ☕</button>
     </footer>
+    <div class="dark"></div>
+    <div class="coffee-section">
+        <p class="credit-card">Buy me a coffee!<br>5363 5421 0001 2278</p>
+    </div>
     <script src="main.js"></script>
 </body>
 
