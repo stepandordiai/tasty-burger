@@ -94,9 +94,12 @@ copyBurgerOne.addEventListener("click", () => {
         copyBurgerOne.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-            <div onclick="toggleBurgerOne()" class="burger-one"></div>
-  <style>
-  .burger-one {
+    ${document.querySelector(".burger-one").outerHTML}
+    <script>
+    ${toggleBurgerOne}
+    </script>
+    <style>
+.burger-one {
     width: 50px;
     height: 0px;
     padding: 25px 0;
@@ -136,15 +139,7 @@ copyBurgerOne.addEventListener("click", () => {
     content: "";
     transform: translateY(0) rotate(45deg);
 }
-
-  </style>
-  <script>
-   function toggleBurgerOne() {
-    document
-        .querySelector(".burger-one")
-        .classList.toggle("burger-one--active");
-}
-  </script>
+    </style>
     `);
 });
 
@@ -154,8 +149,10 @@ copyBurgerTwo.addEventListener("click", () => {
         copyBurgerTwo.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-            <div onclick="toggleBurgerTwo()" class="burger-two"></div>
-
+    ${document.querySelector(".burger-two").outerHTML}
+    <script>
+    ${toggleBurgerTwo}
+    </script>
   <style>
   .burger-two {
     width: 50px;
@@ -202,13 +199,6 @@ copyBurgerTwo.addEventListener("click", () => {
     transition: translate 0.5s, rotate 0.5s 0.5s;
 }
   </style>
-  <script>
-  function toggleBurgerTwo() {
-    document
-        .querySelector(".burger-two")
-        .classList.toggle("burger-two--active");
-}
-  </script>
     `);
 });
 
@@ -218,10 +208,10 @@ copyBurgerThree.addEventListener("click", () => {
         copyBurgerThree.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-                    <div onclick="toggleBurgerThree()" class="burger-three">
-                        <span class="burger-three__center-line"></span>
-                    </div>
-
+        ${document.querySelector(".burger-three").outerHTML}
+    <script>
+    ${toggleBurgerThree}
+    </script>
         <style>
         .burger-three {
             width: 50px;
@@ -283,16 +273,6 @@ copyBurgerThree.addEventListener("click", () => {
             transition: all 0.5s;
         }
         </style>
-        <script>
-        function toggleBurgerThree() {
-            document
-                .querySelector(".burger-three")
-                .classList.toggle("burger-three--active");
-            document
-                .querySelector(".burger-three__center-line")
-                .classList.toggle("burger-three__center-line--active");
-        }
-        </script>
     `);
 });
 
@@ -302,10 +282,10 @@ copyBurgerFour.addEventListener("click", () => {
         copyBurgerFour.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-             <div onclick="toggleBurgerFour()" class="burger-four">
-                <span class="burger-four__center-line"></span>
-            </div>
-
+    ${document.querySelector(".burger-four").outerHTML}
+    <script>
+    ${toggleBurgerFour}
+    </script>
     <style>
     .burger-four {
         position: relative;
@@ -365,16 +345,6 @@ copyBurgerFour.addEventListener("click", () => {
         transition: width 0.5s;
     }
     </style>
-    <script>
-    function toggleBurgerFour() {
-        document
-            .querySelector(".burger-four")
-            .classList.toggle("burger-four--active");
-        document
-            .querySelector(".burger-four__center-line")
-            .classList.toggle("burger-four__center-line--active");
-    }
-    </script>
     `);
 });
 
@@ -384,10 +354,10 @@ copyBurgerSeven.addEventListener("click", () => {
         copyBurgerSeven.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-     <div onclick="toggleBurgerSeven()" class="burger-seven">
-                <span class="burger-seven__center-line1"></span>
-                <span class="burger-seven__center-line2"></span>
-                </div>
+      ${document.querySelector(".burger-seven").outerHTML}
+    <script>
+    ${toggleBurgerSeven}
+    </script>
     <style>
     .burger-seven {
         position: relative;
@@ -467,18 +437,5 @@ copyBurgerSeven.addEventListener("click", () => {
     }
 
     </style>
-    <script>
-    function toggleBurgerSeven() {
-        document
-            .querySelector(".burger-seven")
-            .classList.toggle("burger-seven--active");
-        document
-            .querySelector(".burger-seven__center-line1")
-            .classList.toggle("burger-seven__center-line1--active");
-        document
-            .querySelector(".burger-seven__center-line2")
-            .classList.toggle("burger-seven__center-line2--active");
-    }
-    </script>
     `);
 });
