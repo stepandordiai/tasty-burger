@@ -349,7 +349,7 @@ body {
     width: 100%;
     height: 2px;
     background-color: #000;
-    transform: translateY(-5px);
+    transform: translateY(-7.5px);
     transition: all 0.5s;
 }
 
@@ -359,7 +359,7 @@ body {
     width: 100%;
     height: 2px;
     background-color: #000;
-    transform: translateY(5px);
+    transform: translateY(7.5px);
     transition: all 0.5s;
 }
 
@@ -392,7 +392,7 @@ body {
     width: 100%;
     height: 2px;
     background-color: #000;
-    translate: 0 -5px;
+    translate: 0 -7.5px;
     transition: translate 0.5s 0.5s, rotate 0.5s;
 }
 
@@ -402,7 +402,7 @@ body {
     width: 100%;
     height: 2px;
     background-color: #000;
-    translate: 0 5px;
+    translate: 0 7.5px;
     transition: translate 0.5s 0.5s, rotate 0.5s;
 }
 
@@ -636,7 +636,7 @@ body {
     height: 2px;
     background-color: #000;
     opacity: 1;
-    translate: 0 -5px;
+    translate: 0 -7.5px;
     transition: all 0.3s 0.3s;
 }
 
@@ -648,7 +648,7 @@ body {
     height: 2px;
     background-color: #000;
     opacity: 1;
-    translate: 0 5px;
+    translate: 0 7.5px;
     transition: all 0.3s 0.3s;
 }
 
@@ -695,4 +695,65 @@ body {
     translate: 0 0;
     opacity: 1;
     transition: all 0.3s 0.3s;
+}
+
+/* Burger 8 */
+
+.burger-container {
+    perspective: 100px;
+}
+
+.burger-eight {
+    position: relative;
+    width: 50px;
+    height: 0px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger-eight::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-15px);
+    transition: transform 0.3s 0.3s, rotate 0.3s;
+}
+
+.burger-eight::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(15px);
+    transition: transform 0.3s 0.3s, rotate 0.3s;
+}
+
+.burger-eight__center-line {
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    opacity: 1;
+    transition: all 0s 0.3s;
+}
+
+.burger-eight__center-line--active {
+    opacity: 0;
+}
+
+.burger-eight--active::before {
+    transform: translateY(0);
+    rotate: 45deg;
+    transition: transform 0.3s, rotate 0.3s 0.3s;
+}
+
+.burger-eight--active::after {
+    transform: translateY(0);
+    rotate: -45deg;
+    transition: transform 0.3s, rotate 0.3s 0.3s;
 }

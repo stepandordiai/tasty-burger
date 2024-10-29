@@ -1,16 +1,16 @@
 document.querySelector(".warning").classList.add("warning--access");
 
-setTimeout(() => {
-    document.querySelector(".warning").classList.remove("warning--access");
-}, 3000);
+// setTimeout(() => {
+//     document.querySelector(".warning").classList.remove("warning--access");
+// }, 3000);
 
-function access() {
-    document.querySelector(".warning").classList.add("warning--access");
-}
+// function access() {
+//     document.querySelector(".warning").classList.add("warning--access");
+// }
 
-function deny() {
-    window.history.back() || window.close();
-}
+// function deny() {
+//     window.history.back() || window.close();
+// }
 
 setInterval(() => {
     document
@@ -80,6 +80,15 @@ function toggleBurgerSeven() {
         .classList.toggle("burger-seven__center-line2--active");
 }
 
+function toggleBurgerEight() {
+    document
+        .querySelector(".burger-eight")
+        .classList.toggle("burger-eight--active");
+    document
+        .querySelector(".burger-eight__center-line")
+        .classList.toggle("burger-eight__center-line--active");
+}
+
 // Copy burgers
 
 const copyBurgerOne = document.querySelector(".copy-burger-one");
@@ -87,6 +96,7 @@ const copyBurgerTwo = document.querySelector(".copy-burger-two");
 const copyBurgerThree = document.querySelector(".copy-burger-three");
 const copyBurgerFour = document.querySelector(".copy-burger-four");
 const copyBurgerSeven = document.querySelector(".copy-burger-seven");
+const copyBurgerEight = document.querySelector(".copy-burger-eight");
 
 copyBurgerOne.addEventListener("click", () => {
     copyBurgerOne.textContent = "Copied";
@@ -116,7 +126,7 @@ copyBurgerOne.addEventListener("click", () => {
     width: 100%;
     height: 2px;
     background-color: #000;
-    transform: translateY(-5px);
+    transform: translateY(-7.5px);
     transition: all 0.5s;
 }
 
@@ -126,7 +136,7 @@ copyBurgerOne.addEventListener("click", () => {
     width: 100%;
     height: 2px;
     background-color: #000;
-    transform: translateY(5px);
+    transform: translateY(7.5px);
     transition: all 0.5s;
 }
 
@@ -171,7 +181,7 @@ copyBurgerTwo.addEventListener("click", () => {
     width: 100%;
     height: 2px;
     background-color: #000;
-    translate: 0 -5px;
+    translate: 0 -7.5px;
     transition: translate 0.5s 0.5s, rotate 0.5s;
 }
 
@@ -181,7 +191,7 @@ copyBurgerTwo.addEventListener("click", () => {
     width: 100%;
     height: 2px;
     background-color: #000;
-    translate: 0 5px;
+    translate: 0 7.5px;
     transition: translate 0.5s 0.5s, rotate 0.5s;
 }
 
@@ -360,82 +370,154 @@ copyBurgerSeven.addEventListener("click", () => {
     </script>
     <style>
     .burger-seven {
-        position: relative;
-        width: 50px;
-        height: 0;
-        cursor: pointer;
-        padding: 25px 0;
-    }
+    position: relative;
+    width: 50px;
+    height: 0;
+    cursor: pointer;
+    padding: 25px 0;
+}
 
-    .burger-seven::before {
-        position: absolute;
-        right: 0;
-        content: "";
-        width: 50%;
-        height: 2px;
-        background-color: #000;
-        opacity: 1;
-        translate: 0 -5px;
-        transition: all 0.3s 0.3s;
-    }
+.burger-seven::before {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    opacity: 1;
+    translate: 0 -7.5px;
+    transition: all 0.3s 0.3s;
+}
 
-    .burger-seven::after {
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 50%;
-        height: 2px;
-        background-color: #000;
-        opacity: 1;
-        translate: 0 5px;
-        transition: all 0.3s 0.3s;
-    }
+.burger-seven::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    opacity: 1;
+    translate: 0 7.5px;
+    transition: all 0.3s 0.3s;
+}
 
-    .burger-seven__center-line1 {
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background-color: #000;
-        rotate: 45deg;
-        translate: -25px -25px;
-        opacity: 0;
-        transition: all 0.3s;
-    }
+.burger-seven__center-line1 {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    rotate: 45deg;
+    translate: -25px -25px;
+    opacity: 0;
+    transition: all 0.3s;
+}
 
-    .burger-seven__center-line2 {
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background-color: #000;
-        rotate: -45deg;
-        translate: 25px -25px;
-        opacity: 0;
-        transition: all 0.3s;
-    }
+.burger-seven__center-line2 {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    rotate: -45deg;
+    translate: 25px -25px;
+    opacity: 0;
+    transition: all 0.3s;
+}
 
-    .burger-seven--active::before {
-        right: 25px;
-        opacity: 0;
-        transition: all 0.3s;
-    }
-    .burger-seven--active::after {
-        left: 25px;
-        opacity: 0;
-        transition: all 0.3s;
-    }
+.burger-seven--active::before {
+    right: 25px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.burger-seven--active::after {
+    left: 25px;
+    opacity: 0;
+    transition: all 0.3s;
+}
 
-    .burger-seven__center-line1--active {
-        translate: 0 0;
-        opacity: 1;
-        transition: all 0.3s 0.3s;
-    }
+.burger-seven__center-line1--active {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 0.3s 0.3s;
+}
 
-    .burger-seven__center-line2--active {
-        translate: 0 0;
-        opacity: 1;
-        transition: all 0.3s 0.3s;
-    }
+.burger-seven__center-line2--active {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 0.3s 0.3s;
+}
+    </style>
+    `);
+});
 
+copyBurgerEight.addEventListener("click", () => {
+    copyBurgerEight.textContent = "Copied";
+    setTimeout(() => {
+        copyBurgerEight.textContent = "Copy";
+    }, 3000);
+    navigator.clipboard.writeText(`
+      ${document.querySelector(".burger-eight").outerHTML}
+    <script>
+    ${toggleBurgerEight}
+    </script>
+    <style>
+    .burger-container {
+    perspective: 100px;
+}
+
+.burger-eight {
+    position: relative;
+    width: 50px;
+    height: 0px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger-eight::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-15px);
+    transition: transform 0.3s 0.3s, rotate 0.3s;
+}
+
+.burger-eight::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(15px);
+    transition: transform 0.3s 0.3s, rotate 0.3s;
+}
+
+.burger-eight__center-line {
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    opacity: 1;
+    transition: all 0s 0.3s;
+}
+
+.burger-eight__center-line--active {
+    opacity: 0;
+}
+
+.burger-eight--active::before {
+    transform: translateY(0);
+    rotate: 45deg;
+    transition: transform 0.3s, rotate 0.3s 0.3s;
+}
+
+.burger-eight--active::after {
+    transform: translateY(0);
+    rotate: -45deg;
+    transition: transform 0.3s, rotate 0.3s 0.3s;
+}
     </style>
     `);
 });
