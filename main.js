@@ -68,6 +68,21 @@ function toggleBurgerFour() {
         .classList.toggle("burger-four__center-line--active");
 }
 
+function toggleBurgerSix() {
+    document
+        .querySelector(".burger-six")
+        .classList.toggle("burger-six--active");
+    document
+        .querySelector(".burger-six__center-line")
+        .classList.toggle("burger-six__center-line--active");
+    document
+        .querySelector(".burger-six__center-line2")
+        .classList.toggle("burger-six__center-line2--active");
+    document
+        .querySelector(".burger-six__center-line3")
+        .classList.toggle("burger-six__center-line3--active");
+}
+
 function toggleBurgerSeven() {
     document
         .querySelector(".burger-seven")
@@ -89,14 +104,39 @@ function toggleBurgerEight() {
         .classList.toggle("burger-eight__center-line--active");
 }
 
+function toggleBurger9() {
+    document.querySelector(".burger-9").classList.toggle("burger-9--active");
+    document
+        .querySelector(".burger-9__center-line")
+        .classList.toggle("burger-9__center-line--active");
+}
+
+function toggleBurger10() {
+    document.querySelector(".burger-10").classList.toggle("burger-10--active");
+    document
+        .querySelector(".burger-10__center-line")
+        .classList.toggle("burger-10__center-line--active");
+}
+
+function toggleBurger11() {
+    document.querySelector(".burger-11").classList.toggle("burger-11--active");
+    document
+        .querySelector(".burger-11__center-line")
+        .classList.toggle("burger-11__center-line--active");
+}
+
 // Copy burgers
 
 const copyBurgerOne = document.querySelector(".copy-burger-one");
 const copyBurgerTwo = document.querySelector(".copy-burger-two");
 const copyBurgerThree = document.querySelector(".copy-burger-three");
 const copyBurgerFour = document.querySelector(".copy-burger-four");
+const copyBurgerSix = document.querySelector(".copy-burger-six");
 const copyBurgerSeven = document.querySelector(".copy-burger-seven");
 const copyBurgerEight = document.querySelector(".copy-burger-eight");
+const copyBurger9 = document.querySelector(".copy-burger-9");
+const copyBurger10 = document.querySelector(".copy-burger-10");
+const copyBurger11 = document.querySelector(".copy-burger-11");
 
 copyBurgerOne.addEventListener("click", () => {
     copyBurgerOne.textContent = "Copied";
@@ -358,6 +398,108 @@ copyBurgerFour.addEventListener("click", () => {
     `);
 });
 
+copyBurgerSix.addEventListener("click", () => {
+    copyBurgerSix.textContent = "Copied";
+    setTimeout(() => {
+        copyBurgerSix.textContent = "Copy";
+    }, 3000);
+    navigator.clipboard.writeText(`
+      ${document.querySelector(".burger-six").outerHTML}
+    <script>
+    ${toggleBurgerSix}
+    </script>
+    <style>
+        .burger-six {
+    position: relative;
+    width: 50px;
+    height: 0;
+    padding: 25px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.burger-six::before {
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 2px;
+    background-color: #000;
+    translate: 0 -15px;
+    transition: all 0.3s 0.8s;
+}
+
+.burger-six__center-line {
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s 0.7s;
+}
+
+.burger-six::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    translate: 0 15px;
+    transition: all 0.3s 0.6s;
+}
+
+.burger-six__center-line2 {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0;
+    rotate: 45deg;
+    translate: -50px -50px;
+    transition: all 0.3s 0.3s;
+}
+
+.burger-six__center-line3 {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0;
+    rotate: -45deg;
+    translate: 50px -50px;
+    transition: all 0.3s;
+}
+
+.burger-six--active::before {
+    width: 0;
+    transition: all 0.3s;
+}
+
+.burger-six__center-line--active {
+    width: 0;
+    transition: all 0.3s 0.1s;
+}
+
+.burger-six--active::after {
+    width: 0;
+    transition: all 0.3s 0.2s;
+}
+
+.burger-six__center-line2--active {
+    opacity: 1;
+    translate: 0 0;
+    transition: all 0.3s 0.5s;
+}
+
+.burger-six__center-line3--active {
+    opacity: 1;
+    translate: 0 0;
+    transition: all 0.3s 0.8s;
+}
+    </style>
+    `);
+});
+
 copyBurgerSeven.addEventListener("click", () => {
     copyBurgerSeven.textContent = "Copied";
     setTimeout(() => {
@@ -516,6 +658,208 @@ copyBurgerEight.addEventListener("click", () => {
 .burger-eight--active::after {
     transform: translateY(0);
     rotate: -45deg;
+    transition: transform 0.3s, rotate 0.3s 0.3s;
+}
+    </style>
+    `);
+});
+
+copyBurger9.addEventListener("click", () => {
+    copyBurger9.textContent = "Copied";
+    setTimeout(() => {
+        copyBurger9.textContent = "Copy";
+    }, 3000);
+    navigator.clipboard.writeText(`
+      ${document.querySelector(".burger-9").outerHTML}
+    <script>
+    ${toggleBurger9}
+    </script>
+    <style>
+  .burger-9 {
+    position: relative;
+    width: 50px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger-9::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-15px);
+    transition: all 0.3s;
+}
+
+.burger-9__center-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+.burger-9::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(15px);
+    transition: all 0.3s;
+}
+
+.burger-9--active::before {
+    transform: translateY(0);
+    rotate: 45deg;
+}
+
+.burger-9__center-line--active {
+    rotate: -45deg;
+}
+
+.burger-9--active::after {
+    transform: translateY(0);
+    rotate: 45deg;
+}
+    </style>
+    `);
+});
+
+copyBurger10.addEventListener("click", () => {
+    copyBurger10.textContent = "Copied";
+    setTimeout(() => {
+        copyBurger10.textContent = "Copy";
+    }, 3000);
+    navigator.clipboard.writeText(`
+      ${document.querySelector(".burger-10").outerHTML}
+    <script>
+    ${toggleBurger10}
+    </script>
+    <style>
+.burger-10 {
+    position: relative;
+    width: 50px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger-10::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-15px);
+    transition: all 0.3s;
+}
+
+.burger-10__center-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+.burger-10::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(15px);
+    transition: all 0.3s;
+}
+
+.burger-10--active::before {
+    transform: translateY(0);
+    rotate: -135deg;
+}
+
+.burger-10__center-line--active {
+    rotate: -180deg;
+    opacity: 0;
+}
+
+.burger-10--active::after {
+    transform: translateY(0);
+    rotate: -225deg;
+}
+    </style>
+    `);
+});
+
+copyBurger11.addEventListener("click", () => {
+    copyBurger11.textContent = "Copied";
+    setTimeout(() => {
+        copyBurger11.textContent = "Copy";
+    }, 3000);
+    navigator.clipboard.writeText(`
+      ${document.querySelector(".burger-11").outerHTML}
+    <script>
+    ${toggleBurger11}
+    </script>
+    <style>
+.burger-11 {
+    position: relative;
+    width: 50px;
+    height: 0px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger-11::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-15px);
+    transition: transform 0.3s 0.3s, rotate 0.3s;
+}
+
+.burger-11__center-line {
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    opacity: 1;
+    transition: all 0s 0.3s;
+}
+
+.burger-11::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(15px);
+    transition: transform 0.3s 0.3s, rotate 0.3s;
+}
+
+.burger-11--active::before {
+    transform: translateY(0);
+    rotate: 45deg;
+    transition: transform 0.3s, rotate 0.3s 0.3s;
+}
+
+.burger-11__center-line--active {
+    opacity: 0;
+}
+
+.burger-11--active::after {
+    transform: translateY(0);
+    rotate: 135deg;
     transition: transform 0.3s, rotate 0.3s 0.3s;
 }
     </style>
