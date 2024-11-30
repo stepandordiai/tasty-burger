@@ -20,10 +20,6 @@ copyBurgerEight.addEventListener("click", () => {
     ${toggleBurgerEight}
     </script>
     <style>
-    .burger-container {
-    perspective: 100px;
-}
-
 .burger-eight {
     position: relative;
     width: 50px;
