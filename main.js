@@ -8,14 +8,10 @@ document.querySelector(".js-access-btn").addEventListener("click", () => {
     getAccess();
 });
 
-function getReject() {
-    // You can also window.history.go(-1)
-    window.history.back() || window.close();
-}
-
-document.querySelector(".js-reject-btn").addEventListener("click", () => {
-    getReject();
-});
+// function getReject() {
+//     // You can also window.history.go(-1)
+//     window.history.back() || window.close();
+// }
 
 setTimeout(() => {
     document
@@ -38,20 +34,11 @@ setInterval(() => {
         .classList.toggle("logo-burger__center-line3--active");
 }, 3000);
 
-document.querySelector(".coffee").addEventListener("click", () => {
-    document
-        .querySelector(".coffee-section")
-        .classList.add("coffee-section--active");
-    document.querySelector(".dark").classList.add("dark--active");
-    document.querySelector(".credit-card").classList.add("credit-card--active");
-});
-
-document.querySelector(".dark").addEventListener("click", () => {
-    document
-        .querySelector(".coffee-section")
-        .classList.remove("coffee-section--active");
-    document.querySelector(".dark").classList.remove("dark--active");
+document.querySelector(".js-coffee").addEventListener("click", () => {
+    document.querySelector(".coffee").classList.toggle("coffee--expand");
+    document.querySelector(".coffee span").classList.toggle("coffee-icon");
+    document.querySelector(".dark").classList.toggle("dark--active");
     document
         .querySelector(".credit-card")
-        .classList.remove("credit-card--active");
+        .classList.toggle("credit-card--show");
 });

@@ -19,8 +19,7 @@
             star on
             github repository, it would be really nice!</p>
         <div class="info-container__btn-container">
-            <button class="access-btn js-access-btn">Yes, I agree</button>
-            <button class="reject-btn js-reject-btn">No, thank you</button>
+            <button class="access-btn js-access-btn">Get started</button>
         </div>
     </div>
     <header class="header">
@@ -67,9 +66,9 @@
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-five">Copy</button>
-            <div class="burger-five">
-                <span class="burger-five__center-line"></span>
+            <button class="burger-container__copy copy-burger-5">Copy</button>
+            <div onclick="toggleBurger5()" class="burger-5">
+                <span class="burger-5__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
@@ -117,7 +116,12 @@
                 <span class="burger-12__center-line"></span>
             </div>
         </div>
-        <div class="burger-container"></div>
+        <div class="burger-container">
+            <button class="burger-container__copy copy-burger-13">Copy</button>
+            <div onclick="toggleBurger13()" class="burger-13">
+                <span class="burger-13__center-line"></span>
+            </div>
+        </div>
         <div class="burger-container"></div>
         <div class="burger-container"></div>
         <div class="burger-container"></div>
@@ -137,12 +141,14 @@
             </p>
         </div>
 
-        <button class="coffee">Buy me a coffee ☕</button>
     </footer>
     <div class="dark"></div>
-    <div class="coffee-section">
-        <p class="credit-card">Buy me a coffee!<br>5363 5421 0001 2278</p>
+    <div class="coffee js-coffee"><span>☕</span>
+        <div class="credit-card">5363 5421 0001 2278</div>
     </div>
+    <!-- <div class="coffee-section"> -->
+    <!-- <p class="credit-card">Buy me a coffee!<br></p> -->
+    <!-- </div> -->
     <script src="main.js"></script>
     <script src="./js/burger1.js"></script>
     <script src="./js/burger2.js"></script>
@@ -156,6 +162,7 @@
     <script src="./js/burger10.js"></script>
     <script src="./js/burger11.js"></script>
     <script src="./js/burger12.js"></script>
+    <script src="./js/burger13.js"></script>
 </body>
 
 </html>
