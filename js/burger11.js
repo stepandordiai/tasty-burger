@@ -30,11 +30,11 @@ copyBurger11.addEventListener("click", () => {
 }
 
 .burger-11::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(-15px);
     transition: transform 0.3s 0.3s, rotate 0.3s;
 }
@@ -42,17 +42,17 @@ copyBurger11.addEventListener("click", () => {
 .burger-11__center-line {
     width: 50px;
     height: 2px;
-    background-color: #000;
+    background: #000;
     opacity: 1;
     transition: all 0s 0.3s;
 }
 
 .burger-11::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(15px);
     transition: transform 0.3s 0.3s, rotate 0.3s;
 }

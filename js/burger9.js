@@ -18,7 +18,7 @@ copyBurger9.addEventListener("click", () => {
     ${toggleBurger9}
     </script>
     <style>
-  .burger-9 {
+.burger-9 {
     position: relative;
     width: 50px;
     padding: 25px 0;
@@ -29,11 +29,11 @@ copyBurger9.addEventListener("click", () => {
 }
 
 .burger-9::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(-15px);
     transition: all 0.3s;
 }
@@ -42,16 +42,16 @@ copyBurger9.addEventListener("click", () => {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transition: all 0.3s;
 }
 
 .burger-9::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(15px);
     transition: all 0.3s;
 }

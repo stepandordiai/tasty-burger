@@ -1,114 +1,112 @@
-function toggleBurgerSix() {
+function toggleBurger6() {
+    document.querySelector(".burger-6").classList.toggle("burger-6--active");
     document
-        .querySelector(".burger-six")
-        .classList.toggle("burger-six--active");
+        .querySelector(".burger-6__center-line")
+        .classList.toggle("burger-6__center-line--active");
     document
-        .querySelector(".burger-six__center-line")
-        .classList.toggle("burger-six__center-line--active");
+        .querySelector(".burger-6__center-line2")
+        .classList.toggle("burger-6__center-line2--active");
     document
-        .querySelector(".burger-six__center-line2")
-        .classList.toggle("burger-six__center-line2--active");
-    document
-        .querySelector(".burger-six__center-line3")
-        .classList.toggle("burger-six__center-line3--active");
+        .querySelector(".burger-6__center-line3")
+        .classList.toggle("burger-6__center-line3--active");
 }
 
-const copyBurgerSix = document.querySelector(".copy-burger-six");
+const copyBurger6 = document.querySelector(".copy-burger-6");
 
-copyBurgerSix.addEventListener("click", () => {
-    copyBurgerSix.textContent = "Copied";
+copyBurger6.addEventListener("click", () => {
+    copyBurger6.textContent = "Copied";
     setTimeout(() => {
-        copyBurgerSix.textContent = "Copy";
+        copyBurger6.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-      ${document.querySelector(".burger-six").outerHTML}
+      ${document.querySelector(".burger-6").outerHTML}
     <script>
-    ${toggleBurgerSix}
+    ${toggleBurger6}
     </script>
     <style>
-        .burger-six {
+.burger-6 {
     position: relative;
     width: 50px;
     height: 0;
     padding: 25px 0;
-    cursor: pointer;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
 }
 
-.burger-six::before {
-    position: absolute;
+.burger-6::before {
     content: "";
+    position: absolute;
     width: 25%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     translate: 0 -15px;
     transition: all 0.3s 0.8s;
 }
 
-.burger-six__center-line {
+.burger-6__center-line {
     position: absolute;
     width: 50%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transition: all 0.3s 0.7s;
 }
 
-.burger-six::after {
-    position: absolute;
+.burger-6::after {
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     translate: 0 15px;
     transition: all 0.3s 0.6s;
 }
 
-.burger-six__center-line2 {
+.burger-6__center-line2 {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     opacity: 0;
     rotate: 45deg;
     translate: -50px -50px;
     transition: all 0.3s 0.3s;
 }
 
-.burger-six__center-line3 {
+.burger-6__center-line3 {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     opacity: 0;
     rotate: -45deg;
     translate: 50px -50px;
     transition: all 0.3s;
 }
 
-.burger-six--active::before {
+.burger-6--active::before {
     width: 0;
     transition: all 0.3s;
 }
 
-.burger-six__center-line--active {
+.burger-6__center-line--active {
     width: 0;
     transition: all 0.3s 0.1s;
 }
 
-.burger-six--active::after {
+.burger-6--active::after {
     width: 0;
     transition: all 0.3s 0.2s;
 }
 
-.burger-six__center-line2--active {
+.burger-6__center-line2--active {
     opacity: 1;
     translate: 0 0;
     transition: all 0.3s 0.5s;
 }
 
-.burger-six__center-line3--active {
+.burger-6__center-line3--active {
     opacity: 1;
     translate: 0 0;
     transition: all 0.3s 0.8s;

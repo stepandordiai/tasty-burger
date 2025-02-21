@@ -23,28 +23,28 @@ copyBurger5.addEventListener("click", () => {
     width: 50px;
     height: 0;
     padding: 25px 0;
-    cursor: pointer;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
 }
 
 .burger-5::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     translate: 0 -15px;
     transition: all 0.3s;
 }
 
 .burger-5::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     translate: 0 15px;
     transition: all 0.3s;
 }
@@ -53,7 +53,7 @@ copyBurger5.addEventListener("click", () => {
     position: absolute;
     width: 50%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transition: all 0.3s 0.3s;
 }
 
@@ -73,7 +73,6 @@ copyBurger5.addEventListener("click", () => {
     width: 0;
     transition: all 0.3s;
 }
-
     </style>
     `);
 });

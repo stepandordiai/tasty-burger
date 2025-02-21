@@ -1,66 +1,63 @@
-function toggleBurgerTwo() {
-    document
-        .querySelector(".burger-two")
-        .classList.toggle("burger-two--active");
+function toggleBurger2() {
+    document.querySelector(".burger-2").classList.toggle("burger-2--active");
 }
 
-const copyBurgerTwo = document.querySelector(".copy-burger-two");
+const copyBurger2 = document.querySelector(".copy-burger-2");
 
-copyBurgerTwo.addEventListener("click", () => {
-    copyBurgerTwo.textContent = "Copied";
+copyBurger2.addEventListener("click", () => {
+    copyBurger2.textContent = "Copied";
     setTimeout(() => {
-        copyBurgerTwo.textContent = "Copy";
+        copyBurger2.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-    ${document.querySelector(".burger-two").outerHTML}
+    ${document.querySelector(".burger-2").outerHTML}
     <script>
-    ${toggleBurgerTwo}
+    ${toggleBurger2}
     </script>
   <style>
-  .burger-two {
+.burger-2 {
+    position: relative;
     width: 50px;
     height: 0px;
     padding: 25px 0;
-    position: relative;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.burger-two::before {
+.burger-2::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     translate: 0 -7.5px;
     transition: translate 0.5s 0.5s, rotate 0.5s;
 }
 
-.burger-two::after {
+.burger-2::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     translate: 0 7.5px;
     transition: translate 0.5s 0.5s, rotate 0.5s;
 }
 
-.burger-two--active::before {
-    content: "";
+.burger-2--active::before {
     translate: 0px;
     rotate: 45deg;
     transition: translate 0.5s, rotate 0.5s 0.5s;
 }
 
-.burger-two--active::after {
-    content: "";
+.burger-2--active::after {
     translate: 0px;
     rotate: -45deg;
     transition: translate 0.5s, rotate 0.5s 0.5s;
 }
+
   </style>
     `);
 });

@@ -1,4 +1,4 @@
-.burger-four {
+.burger-4 {
     position: relative;
     width: 50px;
     height: 0;
@@ -9,49 +9,45 @@
     cursor: pointer;
 }
 
-.burger-four::before {
-    position: absolute;
+.burger-4::before {
     content: "";
+    position: absolute;
     width: 0px;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: rotate(45deg);
-
     transition: width 0.5s;
 }
 
-.burger-four::after {
-    position: absolute;
+.burger-4::after {
     content: "";
+    position: absolute;
     width: 0px;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: rotate(-45deg);
     transition: width 0.5s;
 }
 
-.burger-four__center-line {
+.burger-4__center-line {
     position: absolute;
     width: 50px;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transition: width 0.5s 0.5s;
 }
 
-.burger-four--active::before {
+.burger-4--active::before {
     width: 50px;
     transition: width 0.5s 0.5s;
 }
 
-.burger-four--active::after {
+.burger-4--active::after {
     width: 50px;
     transition: width 0.5s 0.5s;
 }
 
-.burger-four__center-line--active {
-    position: absolute;
+.burger-4__center-line--active {
     width: 0px;
-    height: 2px;
-    background-color: #000;
     transition: width 0.5s;
 }

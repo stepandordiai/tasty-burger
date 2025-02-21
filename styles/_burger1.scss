@@ -1,40 +1,38 @@
-.burger-one {
+.burger-1 {
+    position: relative;
     width: 50px;
     height: 0px;
     padding: 25px 0;
-    position: relative;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.burger-one::before {
+.burger-1::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(-7.5px);
     transition: all 0.5s;
 }
 
-.burger-one::after {
+.burger-1::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(7.5px);
     transition: all 0.5s;
 }
 
-.burger-one--active::before {
-    content: "";
+.burger-1--active::before {
     transform: translateY(0) rotate(-45deg);
 }
 
-.burger-one--active::after {
-    content: "";
+.burger-1--active::after {
     transform: translateY(0) rotate(45deg);
 }

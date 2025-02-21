@@ -7,9 +7,9 @@
     <meta name="author" content="Stepan Dordiai">
     <meta name="description" content="Assortment of tasty burger buttons for every taste">
     <meta name="keywords" content="burger-button, interactive-button, header-menu, menu-button">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/favicon.ico">
+    <link rel="stylesheet" href="./public/style.css">
     <title>Tasty Burger</title>
 </head>
 
@@ -23,19 +23,21 @@
         </div>
     </div>
     <header class="header">
-        <div class="header__left-section">
-            <div class="logo-burger">
+        <!-- <div class="header__left-section"> -->
+        <!-- <div class="logo-burger">
                 <span class="logo-burger__center-line"></span>
                 <span class="logo-burger__center-line2"></span>
                 <span class="logo-burger__center-line3"></span>
-            </div>
-            <h1 class="logo-title">Tasty Burger</h1>
-        </div>
-        <a class="header__github-link" href="https://github.com/heeeyooo/tasty-burger" target="_blank"><img
+            </div> -->
+        <h1 class="logo-title">Tasty Burger</h1>
+        <!-- </div> -->
+        <a class="header__github-link" href="https://github.com/stepandordiai/tasty-burger" target="_blank"><img
                 src="./img/github-logo.png" alt="">Star 1</a>
     </header>
     <div class="grid-container">
+
         <!--  -->
+
         <div class="burger-container one"></div>
         <div class="burger-container two"></div>
         <div class="burger-container three"></div>
@@ -44,91 +46,143 @@
         <div class="burger-container six"></div>
         <div class="burger-container seven"></div>
         <div class="burger-container eight"></div>
+
         <!--  -->
+
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-one">Copy</button>
-            <div onclick="toggleBurgerOne()" class="burger-one"></div>
+            <div class="burger-container__header">
+                <span>01</span>
+                <button class="copy-burger-1">Copy</button>
+            </div>
+            <div onclick="toggleBurger1()" class="burger-1"></div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-two">Copy</button>
-            <div onclick="toggleBurgerTwo()" class="burger-two"></div>
+            <div class="burger-container__header">
+                <span>02</span>
+                <button class="copy-burger-2">Copy</button>
+            </div>
+            <div onclick="toggleBurger2()" class="burger-2"></div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-three">Copy</button>
-            <div onclick="toggleBurgerThree()" class="burger-three">
-                <span class="burger-three__center-line"></span>
+            <div class="burger-container__header">
+                <span>03</span>
+                <button class="copy-burger-3">Copy</button>
+            </div>
+            <div onclick="toggleBurger3()" class="burger-3">
+                <span class="burger-3__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-four">Copy</button>
-            <div onclick="toggleBurgerFour()" class="burger-four">
-                <span class="burger-four__center-line"></span>
+            <div class="burger-container__header">
+                <span>04</span>
+                <button class="copy-burger-4">Copy</button>
+            </div>
+            <div onclick="toggleBurger4()" class="burger-4">
+                <span class="burger-4__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-5">Copy</button>
+            <div class="burger-container__header">
+                <span>05</span>
+                <button class="copy-burger-5">Copy</button>
+            </div>
             <div onclick="toggleBurger5()" class="burger-5">
                 <span class="burger-5__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-six">Copy</button>
-            <div class="burger-six" onclick="toggleBurgerSix()">
-                <span class="burger-six__center-line"></span>
-                <span class="burger-six__center-line2"></span>
-                <span class="burger-six__center-line3"></span>
+            <div class="burger-container__header">
+                <span>06</span>
+                <button class="copy-burger-6">Copy</button>
+            </div>
+            <div class="burger-6" onclick="toggleBurger6()">
+                <span class="burger-6__center-line"></span>
+                <span class="burger-6__center-line2"></span>
+                <span class="burger-6__center-line3"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-seven">Copy</button>
-            <div onclick="toggleBurgerSeven()" class="burger-seven">
-                <span class="burger-seven__center-line1"></span>
-                <span class="burger-seven__center-line2"></span>
+            <div class="burger-container__header">
+                <span>07</span>
+                <button class="copy-burger-7">Copy</button>
+            </div>
+            <div onclick="toggleBurger7()" class="burger-7">
+                <span class="burger-7__center-line1"></span>
+                <span class="burger-7__center-line2"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-eight">Copy</button>
-            <div onclick="toggleBurgerEight()" class="burger-eight">
-                <span class="burger-eight__center-line"></span>
+            <div class="burger-container__header">
+                <span>08</span>
+                <button class="copy-burger-8">Copy</button>
+            </div>
+            <div onclick="toggleBurger8()" class="burger-8">
+                <span class="burger-8__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-9">Copy</button>
+            <div class="burger-container__header">
+                <span>09</span>
+                <button class="copy-burger-9">Copy</button>
+            </div>
             <div onclick="toggleBurger9()" class="burger-9">
                 <span class="burger-9__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-10">Copy</button>
+            <div class="burger-container__header">
+                <span>010</span>
+                <button class="copy-burger-10">Copy</button>
+            </div>
             <div onclick="toggleBurger10()" class="burger-10">
                 <span class="burger-10__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-11">Copy</button>
+            <div class="burger-container__header">
+                <span>011</span>
+                <button class="copy-burger-11">Copy</button>
+            </div>
             <div onclick="toggleBurger11()" class="burger-11">
                 <span class="burger-11__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-12">Copy</button>
+            <div class="burger-container__header">
+                <span>012</span>
+                <button class="copy-burger-12">Copy</button>
+            </div>
             <div onclick="toggleBurger12()" class="burger-12">
                 <span class="burger-12__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-13">Copy</button>
+            <div class="burger-container__header">
+                <span>013</span>
+                <button class="copy-burger-13">Copy</button>
+            </div>
             <div onclick="toggleBurger13()" class="burger-13">
                 <span class="burger-13__center-line"></span>
             </div>
         </div>
         <div class="burger-container">
-            <button class="burger-container__copy copy-burger-14">Copy</button>
+            <div class="burger-container__header">
+                <span>014</span>
+                <button class="copy-burger-14">Copy</button>
+            </div>
             <div onclick="toggleBurger14()" class="burger-14">
                 <span class="burger-14__center-line"></span>
             </div>
         </div>
-        <div class="burger-container"></div>
+        <div class="burger-container">
+            <div class="burger-container__header">
+                <span>015</span>
+                <button class="copy-burger-15">Copy</button>
+            </div>
+            <div onclick="toggleBurger15()" class="burger-15">
+                <span class="burger-15__center-line"></span>
+            </div>
+        </div>
         <div class="burger-container"></div>
         <div class="burger-container"></div>
         <div class="burger-container"></div>
@@ -141,19 +195,17 @@
     </div>
     <footer class="footer">
         <div class="copyright">
-            <p>&copy; 2024 Tasty Burger</p>
+            <p>&copy; 2024 - <span class="current-year"></span> Tasty Burger</p>
             <p>Made with 💙 by <a href="https://stepandordiai.netlify.app/" target="_blank">Stepan Dordiai</a>
             </p>
+            <p>All rights reserved</p>
         </div>
-
     </footer>
-    <div class="dark"></div>
-    <div class="coffee js-coffee"><span>☕</span>
-        <div class="credit-card">5363 5421 0001 2278</div>
+    <div class="coffee-container">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script
+            type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'R6R4196W4F'); kofiwidget2.draw();</script>
     </div>
-    <!-- <div class="coffee-section"> -->
-    <!-- <p class="credit-card">Buy me a coffee!<br></p> -->
-    <!-- </div> -->
     <script src="main.js"></script>
     <script src="./js/burger1.js"></script>
     <script src="./js/burger2.js"></script>
@@ -169,6 +221,7 @@
     <script src="./js/burger12.js"></script>
     <script src="./js/burger13.js"></script>
     <script src="./js/burger14.js"></script>
+    <script src="./js/burger15.js"></script>
 </body>
 
 </html>

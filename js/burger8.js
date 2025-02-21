@@ -1,75 +1,73 @@
-function toggleBurgerEight() {
+function toggleBurger8() {
+    document.querySelector(".burger-8").classList.toggle("burger-8--active");
     document
-        .querySelector(".burger-eight")
-        .classList.toggle("burger-eight--active");
-    document
-        .querySelector(".burger-eight__center-line")
-        .classList.toggle("burger-eight__center-line--active");
+        .querySelector(".burger-8__center-line")
+        .classList.toggle("burger-8__center-line--active");
 }
 
-const copyBurgerEight = document.querySelector(".copy-burger-eight");
+const copyBurger8 = document.querySelector(".copy-burger-8");
 
-copyBurgerEight.addEventListener("click", () => {
-    copyBurgerEight.textContent = "Copied";
+copyBurger8.addEventListener("click", () => {
+    copyBurger8.textContent = "Copied";
     setTimeout(() => {
-        copyBurgerEight.textContent = "Copy";
+        copyBurger8.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-      ${document.querySelector(".burger-eight").outerHTML}
+      ${document.querySelector(".burger-8").outerHTML}
     <script>
-    ${toggleBurgerEight}
+    ${toggleBurger8}
     </script>
     <style>
-.burger-eight {
+.burger-8 {
     position: relative;
     width: 50px;
     height: 0px;
     padding: 15px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     cursor: pointer;
 }
 
-.burger-eight::before {
-    position: absolute;
+.burger-8::before {
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(-15px);
     transition: transform 0.3s 0.3s, rotate 0.3s;
 }
 
-.burger-eight::after {
-    position: absolute;
+.burger-8::after {
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(15px);
     transition: transform 0.3s 0.3s, rotate 0.3s;
 }
 
-.burger-eight__center-line {
+.burger-8__center-line {
     width: 50px;
     height: 2px;
-    background-color: #000;
+    background: #000;
     opacity: 1;
     transition: all 0s 0.3s;
 }
 
-.burger-eight__center-line--active {
+.burger-8__center-line--active {
     opacity: 0;
 }
 
-.burger-eight--active::before {
+.burger-8--active::before {
     transform: translateY(0);
     rotate: 45deg;
     transition: transform 0.3s, rotate 0.3s 0.3s;
 }
 
-.burger-eight--active::after {
+.burger-8--active::after {
     transform: translateY(0);
     rotate: -45deg;
     transition: transform 0.3s, rotate 0.3s 0.3s;

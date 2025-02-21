@@ -29,11 +29,11 @@ copyBurger14.addEventListener("click", () => {
 }
 
 .burger-14::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(-15px);
     transition: all 0.6s;
 }
@@ -42,16 +42,16 @@ copyBurger14.addEventListener("click", () => {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transition: all 0.6s;
 }
 
 .burger-14::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(15px);
     transition: all 0.6s;
 }
@@ -70,7 +70,6 @@ copyBurger14.addEventListener("click", () => {
     transform: translateY(0);
     rotate: 225deg;
 }
-
     </style>
     `);
 });

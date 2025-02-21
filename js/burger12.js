@@ -25,17 +25,16 @@ copyBurger12.addEventListener("click", () => {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    cursor: pointer;
-    /* For better arrow design */
     overflow: hidden;
+    cursor: pointer;
 }
 
 .burger-12::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(-15px);
     transition: all 0.3s;
 }
@@ -43,16 +42,16 @@ copyBurger12.addEventListener("click", () => {
 .burger-12__center-line {
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
 }
 
 .burger-12::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
     transform: translateY(15px);
-    background-color: #000;
+    background: #000;
     transition: all 0.3s;
 }
 

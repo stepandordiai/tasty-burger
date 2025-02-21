@@ -1,82 +1,77 @@
-function toggleBurgerFour() {
+function toggleBurger4() {
+    document.querySelector(".burger-4").classList.toggle("burger-4--active");
     document
-        .querySelector(".burger-four")
-        .classList.toggle("burger-four--active");
-    document
-        .querySelector(".burger-four__center-line")
-        .classList.toggle("burger-four__center-line--active");
+        .querySelector(".burger-4__center-line")
+        .classList.toggle("burger-4__center-line--active");
 }
 
-const copyBurgerFour = document.querySelector(".copy-burger-four");
+const copyBurger4 = document.querySelector(".copy-burger-4");
 
-copyBurgerFour.addEventListener("click", () => {
-    copyBurgerFour.textContent = "Copied";
+copyBurger4.addEventListener("click", () => {
+    copyBurger4.textContent = "Copied";
     setTimeout(() => {
-        copyBurgerFour.textContent = "Copy";
+        copyBurger4.textContent = "Copy";
     }, 3000);
     navigator.clipboard.writeText(`
-    ${document.querySelector(".burger-four").outerHTML}
+    ${document.querySelector(".burger-4").outerHTML}
     <script>
-    ${toggleBurgerFour}
+    ${toggleBurger4}
     </script>
     <style>
-    .burger-four {
-        position: relative;
-        width: 50px;
-        height: 0;
-        padding: 25px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
+.burger-4 {
+    position: relative;
+    width: 50px;
+    height: 0;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
-    .burger-four::before {
-        position: absolute;
-        content: "";
-        width: 0px;
-        height: 2px;
-        background-color: #000;
-        transform: rotate(45deg);
+.burger-4::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background: #000;
+    transform: rotate(45deg);
+    transition: width 0.5s;
+}
 
-        transition: width 0.5s;
-    }
+.burger-4::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background: #000;
+    transform: rotate(-45deg);
+    transition: width 0.5s;
+}
 
-    .burger-four::after {
-        position: absolute;
-        content: "";
-        width: 0px;
-        height: 2px;
-        background-color: #000;
-        transform: rotate(-45deg);
-        transition: width 0.5s;
-    }
+.burger-4__center-line {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #000;
+    transition: width 0.5s 0.5s;
+}
 
-    .burger-four__center-line {
-        position: absolute;
-        width: 50px;
-        height: 2px;
-        background-color: #000;
-        transition: width 0.5s 0.5s;
-    }
+.burger-4--active::before {
+    width: 50px;
+    transition: width 0.5s 0.5s;
+}
 
-    .burger-four--active::before {
-        width: 50px;
-        transition: width 0.5s 0.5s;
-    }
+.burger-4--active::after {
+    width: 50px;
+    transition: width 0.5s 0.5s;
+}
 
-    .burger-four--active::after {
-        width: 50px;
-        transition: width 0.5s 0.5s;
-    }
+.burger-4__center-line--active {
+    width: 0px;
+    transition: width 0.5s;
+}
 
-    .burger-four__center-line--active {
-        position: absolute;
-        width: 0px;
-        height: 2px;
-        background-color: #000;
-        transition: width 0.5s;
-    }
     </style>
     `);
 });

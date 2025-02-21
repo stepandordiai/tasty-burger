@@ -29,8 +29,8 @@ copyBurger13.addEventListener("click", () => {
 }
 
 .burger-13::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, #000 50%, transparent 50%);
@@ -42,13 +42,13 @@ copyBurger13.addEventListener("click", () => {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transition: all 0.3s;
 }
 
 .burger-13::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, transparent 50%, #000 50%);

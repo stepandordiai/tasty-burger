@@ -29,11 +29,11 @@ copyBurger10.addEventListener("click", () => {
 }
 
 .burger-10::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(-15px);
     transition: all 0.3s;
 }
@@ -42,16 +42,16 @@ copyBurger10.addEventListener("click", () => {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transition: all 0.3s;
 }
 
 .burger-10::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: #000;
     transform: translateY(15px);
     transition: all 0.3s;
 }
