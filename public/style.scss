@@ -81,7 +81,7 @@ body {
 
 .info-container__title {
 	font-size: 20px;
-	font-weight: 400;
+	text-align: center;
 }
 
 .info-container__btn-container {
@@ -120,24 +120,35 @@ body {
 }
 
 .home-top {
-	height: calc(50svh - 30px);
+	height: calc(50svh - 25px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	gap: 30px;
 	padding: 15px;
+	text-align: center;
 
 	button {
 		padding: 10px;
-		background: #fff;
+		background: #66f38c;
 		color: #000;
+		border-radius: 10px;
+	}
+}
+
+.home-top__title {
+	font-size: clamp(1rem, 4vw, 1.25rem);
+
+	a {
+		color: #66f38c;
 		border-radius: 10px;
 	}
 }
 
 .header {
 	position: fixed;
+	z-index: 1;
 	padding: 15px 0 0 15px;
 	display: flex;
 	justify-content: space-between;
@@ -185,6 +196,13 @@ body {
 
 	span {
 		color: #fff;
+	}
+
+	button {
+		background: #66f38c;
+		color: #000;
+		border-radius: 10px;
+		padding: 5px;
 	}
 }
 
@@ -237,6 +255,10 @@ body {
 @media screen and (width <= 896px) {
 	body {
 		padding: 15px;
+	}
+
+	.home-top {
+		height: calc(50svh - 15px);
 	}
 
 	.grid-container {
