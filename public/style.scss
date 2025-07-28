@@ -52,22 +52,6 @@ body {
 	padding: 25px;
 }
 
-.home-top {
-	height: calc(50svh - 75px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	gap: 25px;
-
-	button {
-		padding: 10px;
-		background: #fff;
-		color: #000;
-		border-radius: 10px;
-	}
-}
-
 .info-container {
 	position: fixed;
 	top: 0;
@@ -135,24 +119,35 @@ body {
 	height: 100%;
 }
 
+.home-top {
+	height: calc(50svh - 30px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 30px;
+	padding: 15px;
+
+	button {
+		padding: 10px;
+		background: #fff;
+		color: #000;
+		border-radius: 10px;
+	}
+}
+
 .header {
-	min-height: 60px;
+	position: fixed;
+	padding: 15px 0 0 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 30px;
 }
 
 .logo-title {
 	font-size: 1.5rem;
 	font-weight: 300;
 	color: #fff;
-}
-
-.header__github-link img {
-	vertical-align: middle;
-	width: 25px;
-	margin-right: 5px;
 }
 
 .grid-container {
@@ -242,10 +237,6 @@ body {
 @media screen and (width <= 896px) {
 	body {
 		padding: 15px;
-	}
-
-	.header {
-		padding: 0 15px;
 	}
 
 	.grid-container {
