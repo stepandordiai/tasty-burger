@@ -3,7 +3,6 @@
 	width: 50px;
 	height: 0;
 	padding: 25px 0;
-	cursor: pointer;
 }
 
 .burger-7::before {
@@ -13,7 +12,6 @@
 	width: 50%;
 	height: 2px;
 	background: #fff;
-
 	opacity: 1;
 	translate: 0 -7.5px;
 	transition: all 0.3s 0.3s;
@@ -34,10 +32,10 @@
 
 .burger-7__center-line1 {
 	position: absolute;
+	left: 0;
 	height: 2px;
 	width: 100%;
 	background: #fff;
-
 	rotate: 45deg;
 	translate: -25px -25px;
 	opacity: 0;
@@ -46,10 +44,10 @@
 
 .burger-7__center-line2 {
 	position: absolute;
+	left: 0;
 	height: 2px;
 	width: 100%;
 	background: #fff;
-
 	rotate: -45deg;
 	translate: 25px -25px;
 	opacity: 0;

@@ -7,7 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-1::before {
@@ -46,7 +45,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-2::before {
@@ -84,57 +82,53 @@
 .burger-3 {
   position: relative;
   width: 50px;
-  height: 0px;
   padding: 25px 0;
-  cursor: pointer;
 }
 
 .burger-3::before {
   content: "";
   position: absolute;
+  left: 0;
   width: 100%;
   height: 2px;
   background: #fff;
-  translate: 0 -15px;
-  transition: translate 0.5s, rotate 0.5s;
+  transform: translate(0, -15px) rotate(0);
+  transition: transform 0.5s;
+}
+
+.burger-3--active::before {
+  transform: translate(0, 0) rotate(45deg);
 }
 
 .burger-3::after {
   content: "";
   position: absolute;
+  left: 0;
   width: 100%;
   height: 2px;
   background: #fff;
-  translate: 0 15px;
-  transition: translate 0.5s, rotate 0.5s;
+  transform: translate(0, 15px) rotate(0);
+  transition: transform 0.5s;
+}
+
+.burger-3--active::after {
+  transform: translate(0, 0) rotate(-45deg);
 }
 
 .burger-3__center-line {
   width: 50px;
   height: 2px;
   position: absolute;
+  left: 0;
   background: #fff;
   opacity: 1;
-  transition: all 0.5s;
-}
-
-.burger-3--active::before {
-  content: "";
-  translate: 0px;
-  rotate: 45deg;
-  transition: all 0.5s;
-}
-
-.burger-3--active::after {
-  translate: 0px;
-  rotate: -45deg;
+  transform: translate(0, 0);
   transition: all 0.5s;
 }
 
 .burger-3__center-line--active {
-  translate: -50px 0;
+  transform: translate(-50px, 0);
   opacity: 0;
-  transition: all 0.5s;
 }
 
 .burger-4 {
@@ -145,7 +139,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-4::before {
@@ -199,7 +192,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-5::before {
@@ -255,7 +247,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-6::before {
@@ -340,7 +331,6 @@
   width: 50px;
   height: 0;
   padding: 25px 0;
-  cursor: pointer;
 }
 
 .burger-7::before {
@@ -369,6 +359,7 @@
 
 .burger-7__center-line1 {
   position: absolute;
+  left: 0;
   height: 2px;
   width: 100%;
   background: #fff;
@@ -380,6 +371,7 @@
 
 .burger-7__center-line2 {
   position: absolute;
+  left: 0;
   height: 2px;
   width: 100%;
   background: #fff;
@@ -421,7 +413,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-8::before {
@@ -475,7 +466,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-9::before {
@@ -527,7 +517,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-10::before {
@@ -581,7 +570,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-11::before {
@@ -636,7 +624,6 @@
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .burger-12::before {
@@ -684,7 +671,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-13::before {
@@ -736,7 +722,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-14::before {
@@ -789,7 +774,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .burger-15::before {
@@ -830,6 +814,118 @@
 
 .burger-15--active::after {
   transform: translate(0px, 0px) rotate(-135deg);
+}
+
+.burger-16 {
+  position: relative;
+  width: 50px;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-16::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-10px) scaleX(1);
+  transform-origin: right;
+  transition: all 0.3s 0.45s;
+}
+
+.burger-16--active::before {
+  transform: translateY(-10px) scaleX(0);
+  transition: all 0.3s;
+}
+
+.burger-16::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: translateY(10px) scaleX(1);
+  transform-origin: right;
+  transition: transform 0.3s 0.3s;
+}
+
+.burger-16--active::after {
+  transform: translateY(10px) scaleX(0);
+  transition: all 0.3s 0.15s;
+}
+
+.burger-16__top-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.3s 0.15s;
+}
+
+.burger-16__top-line--active {
+  transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  transition: transform 0.3s 0.3s;
+}
+
+.burger-16__bottom-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.3s;
+}
+
+.burger-16__bottom-line--active {
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  transition: transform 0.3s 0.45s;
+}
+
+.burger-17 {
+  position: relative;
+  width: 50px;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-17::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-10px) rotate(0);
+  transition: transform 0.3s;
+}
+
+.burger-17--active::before {
+  transform: translateY(0) rotate(135deg);
+}
+
+.burger-17::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: translateY(10px) rotate(0);
+  transition: transform 0.3s;
+}
+
+.burger-17--active::after {
+  transform: translateY(0) rotate(45deg);
 }
 
 ::-webkit-scrollbar {
