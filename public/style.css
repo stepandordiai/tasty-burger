@@ -940,6 +940,7 @@
 
 :root {
   --white: #fff;
+  --accent-clr: rgb(179, 231, 65);
 }
 
 button {
@@ -1042,7 +1043,7 @@ body {
 }
 .home-top button {
   padding: 10px;
-  background: #66f38c;
+  background: var(--accent-clr);
   color: #000;
   border-radius: 10px;
 }
@@ -1051,7 +1052,7 @@ body {
   font-size: clamp(1rem, 4vw, 1.25rem);
 }
 .home-top__title a {
-  color: #66f38c;
+  color: var(--accent-clr);
   border-radius: 10px;
 }
 
@@ -1106,20 +1107,23 @@ body {
   color: #fff;
 }
 .burger-container__header button {
-  background: #66f38c;
+  background: rgb(179, 231, 65);
   color: #000;
   border-radius: 10px;
   padding: 5px;
 }
 
 .footer {
-  padding: 30px;
-  color: #fff;
+  padding: 15px;
 }
 
 .copyright {
   display: flex;
   flex-direction: column;
+}
+
+.creator {
+  color: var(--accent-clr);
 }
 
 .coffee-container {
